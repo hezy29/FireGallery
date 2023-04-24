@@ -1,0 +1,8 @@
+.git
+package-lock.json
+yarn.lock
+
+**/backup
+**/public
+**/node_modules
+photo-gallery/
