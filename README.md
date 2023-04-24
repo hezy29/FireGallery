@@ -28,3 +28,11 @@
 5. Distribute the cloud storage of photos into multiple server machines to utilize more storage space and alleviate the pressure caused by concurrent visits
 6. Attach each photo to a map according to the location where it is taken and display the map as a "footprint" of the user, which can be shared through social media
 7. Attach a blockchain token to each photo to register the copyright and prevent unauthorized modifications
+
+## Setup
+- Download the docker image from [google drive](https://drive.google.com/file/d/1--j08P6aK2FO6Br95q8Mo3bt8bE6lfc2/view?usp=sharing)
+- Navigate to the download folder, and launch powershell and import the image as follows `docker load -i docker_image_mongo.tar`
+- Launch a container from this image using `docker run -p 3000:3000 -p 5000:5000 -p 8000:8000 --name it5007-2220 -dit it5007_tutorial:t4 bash`
+  - For Mac user, `port 5000` are sometimes occupied. Please use `port 5050` instead. In this situation, make sure to change `port` to `5050` in `api/auth/server.js`
+- Clone this repository to the container
+- Refer to `README.md` files in `ui` and `api` folder to setup
