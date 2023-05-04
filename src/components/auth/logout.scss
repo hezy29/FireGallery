@@ -1,0 +1,15 @@
+.logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        width: 200px;
+        height: 30px;
+        border: none;
+        background-color: lightblue;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
