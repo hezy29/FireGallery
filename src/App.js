@@ -47,7 +47,7 @@ function App() {
     <div className="App">
       <Title />
       {isLoggedIn && user?.uid &&
-        <div className='login-page'>{user?.uid}
+        <div className='login-page'>
           <Logout />
           <UploadForm user={user} />
           {docs &&

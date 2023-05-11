@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import "./login.scss";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    // GoogleAuthProvider,
+    // signInWithPopup,
+} from "firebase/auth";
 import { auth } from "../../firebase/config";
 
 
-const provider = new GoogleAuthProvider();
+// const provider = new GoogleAuthProvider();
 
 const Login = () => {
 
@@ -23,8 +28,8 @@ const Login = () => {
                 // ...
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                // const errorCode = error.code;
+                // const errorMessage = error.message;
                 setError(true);
                 // ..
             });
@@ -42,8 +47,8 @@ const Login = () => {
                 // ...
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                // const errorCode = error.code;
+                // const errorMessage = error.message;
                 setError(true);
                 // ..
             });
@@ -51,7 +56,7 @@ const Login = () => {
     }
 
     // const signInWithGoogle = () => {
-    //     signInWithRedirect(auth, provider)
+    //     signInWithPopup(auth, provider)
     //         .then((result) => {
     //             // This gives you a Google Access Token. You can use it to access the Google API.
     //             const credential = GoogleAuthProvider.credentialFromResult(result);
